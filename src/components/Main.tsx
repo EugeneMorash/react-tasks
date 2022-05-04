@@ -6,7 +6,6 @@ type MainPropsType = {
     userList: UsersArrType
 }
 
-
 export function Main(props: MainPropsType) {
 
     const userArray = props.userList.map((person) => {
@@ -27,3 +26,5 @@ export function Main(props: MainPropsType) {
         </main>
     )
 }
+
+

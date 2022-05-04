@@ -2,12 +2,22 @@ import React from 'react';
 import './App.css';
 import {Header} from "./components/Header";
 import {Main} from "./components/Main";
+import {Footer} from "./components/Footer";
+import {Aside} from "./components/Aside";
+
 
 export type UsersArrType = Array<UserType>
 export type UserType = {
     id: number
     name: string
     age: number
+}
+
+export type TopCarsArrType = Array<TopCarsType>
+export type TopCarsType = {
+    id: number
+    manufacturer: string
+    model: string
 }
 
 const users: UsersArrType = [
@@ -24,6 +34,12 @@ const users: UsersArrType = [
     {id: 11, name: "Christopher", age: 100},
 ]
 
+const topCars: TopCarsArrType = [
+    {id: 1, manufacturer: "BMW", model: 'm5cs'},
+    {id: 2, manufacturer: "Mercedes", model: 'e63s'},
+    {id: 3, manufacturer: "Audi", model: 'rs6'}
+]
+
 
 function App() {
     return (
@@ -34,17 +50,38 @@ function App() {
 
             <Main userList={users}/>
 
+            <Aside advertising={"Advertising"}/>
 
-            <aside>
-                Aside
-            </aside>
-            <footer>
-                Footer
-            </footer>
+            <Footer carsList={topCars}/>
         </div>
     );
 }
 
 export default App;
+
+
+
+// ======= react-tasks =======
+//
+// **** создание вложенных компонент ****
+// 1. Сделать компоненты
+// Footer и Aside
+//
+// 2. Сделать возможно изменять содержимое тега Footer и Aside через пропс
+//
+// 3. Типизировать
+//
+//
+// **** map ****
+// 1. В react-tasks в App создать массив
+// const topCars = [
+//     {id: 1, manufacturer: "BMW", model: 'm5cs'},
+//     {id: 2, manufacturer: "Mercedes", model: 'e63s'},
+//     {id: 3, manufacturer: "Audi", model: 'rs6'}
+// ]
+//
+// 2. Вывести массив машин в компоненте Footer через map в html Таблицу (!гуглить по-английски! (Учимся))
+//
+// 3. Ошибок в консоли не должно быть и всё должно быть типизировано
 
 
