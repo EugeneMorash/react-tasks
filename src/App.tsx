@@ -4,6 +4,7 @@ import {Header} from "./components/Header";
 import {Main} from "./components/Main";
 import {Footer} from "./components/Footer";
 import {Aside} from "./components/Aside";
+import {Cat} from "./components/Cat";
 
 
 export type UsersArrType = Array<UserType>
@@ -34,6 +35,24 @@ const users: UsersArrType = [
     {id: 11, name: "Christopher", age: 100},
 ]
 
+
+export type CatsArrType = Array<CatsType>
+export type CatsType = {
+    id: number
+    breed: string
+    age: number
+    cahonas?: boolean
+}
+
+const cats: CatsArrType = [
+    {id: 1, breed: "Persian", age: 1, cahonas: true},
+    {id: 2, breed: "Main Coon", age: 3, cahonas: false},
+    {id: 3, breed: "Sphynx", age: 5, cahonas: true},
+    {id: 4, breed: "Oriental", age: 2, cahonas: true},
+    {id: 5, breed: "Devon Rex", age: 6,cahonas: false},
+    {id: 6, breed: "Bengal", age: 18}
+]
+
 const topCars: TopCarsArrType = [
     {id: 1, manufacturer: "BMW", model: 'm5cs'},
     {id: 2, manufacturer: "Mercedes", model: 'e63s'},
@@ -49,6 +68,8 @@ function App() {
             <Header title={"Header bottom"}/>
 
             <Main userList={users}/>
+
+            <Cat catList={cats}/>
 
             <Aside advertising={"Advertising"}/>
 

@@ -9,10 +9,12 @@ export function Footer(props: FooterPropsType) {
 
     const topCarsArray = props.carsList.map(
         (car) => {
-            return <tr key={car.id}>
-                <td>{car.manufacturer}</td>
-                <td>{car.model}</td>
-            </tr>;
+            return (
+                <tr key={car.id}>
+                    <td>{car.manufacturer}</td>
+                    <td>{car.model}</td>
+                </tr>
+            );
         }
     )
 // console.log(topCarsArray)
@@ -21,8 +23,8 @@ export function Footer(props: FooterPropsType) {
             <table>
                 <thead>
                 <tr>
-                    <td>Manufacturer</td>
-                    <td>Model</td>
+                    <td><b>Manufacturer</b></td>
+                    <td><b>Model</b></td>
                 </tr>
                 </thead>
                 <tbody>

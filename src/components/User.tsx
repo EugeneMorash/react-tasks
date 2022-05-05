@@ -6,6 +6,7 @@ type UserPropsType = {
 }
 
 export function User(props: UserPropsType) {
+
     return (
         <li>
             <div>Name: {props.name}</div>
