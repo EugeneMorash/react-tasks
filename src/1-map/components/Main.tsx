@@ -1,6 +1,7 @@
 import React from 'react';
 import {User} from "./User";
-import {UsersArrType} from "../App";
+import {UsersArrType} from "../App1";
+
 
 type MainPropsType = {
     userList: UsersArrType

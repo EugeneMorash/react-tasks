@@ -1,5 +1,6 @@
 import React from 'react';
-import {TopCarsArrType} from "../App";
+import {TopCarsArrType} from "../App1";
+
 
 type FooterPropsType = {
     carsList: TopCarsArrType

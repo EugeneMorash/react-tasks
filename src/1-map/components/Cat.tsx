@@ -1,5 +1,6 @@
 import React from 'react';
-import {CatsArrType} from '../App';
+import {CatsArrType} from "../App1";
+
 
 type CatPropsType = {
     catList: CatsArrType
