@@ -1,0 +1,51 @@
+.box__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 349px;
+}
+
+.box__avatar {
+  width: 64px;
+  height: 64px;
+  margin-right: 4px;
+}
+
+.box__block {
+  background-image: url("./Group 1728.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box__name {
+  padding-left: 49px;
+  color: #B3ADEE;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.box__text {
+  padding-left: 49px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #F7F4F4;
+}
+
+.box__time {
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #7D7D7D;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  text-align: right;
+}
