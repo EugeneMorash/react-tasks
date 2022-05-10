@@ -6,6 +6,7 @@
       -ms-flex-align: end;
           align-items: flex-end;
   max-width: 349px;
+  margin-bottom: 10px;
 }
 
 .box__avatar {
@@ -15,7 +16,7 @@
 }
 
 .box__block {
-  background-image: url("./Group 1728.png");
+  background-image: url("../Group 1728.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-family: Arial, Helvetica, sans-serif;

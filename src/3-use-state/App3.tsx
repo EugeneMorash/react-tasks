@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import {Button} from "../2-button/components/Button";
-import {ButtonMath} from "../2-button/components/ButtonMath";
-import {Aside} from "../1-map/components/Aside";
+import {Button} from "./components/ButtonMath";
+
+
+
 
 type FilterType = 'add' | 'sub' | 'rand';
 
@@ -22,7 +23,6 @@ export function App3() {
         } else if (filter === "rand") {
             setCount(count + Math.floor(Math.random() * 21 - 10))
         }
-
     }
 
     return (
@@ -38,9 +38,9 @@ export function App3() {
             </div>
 
             <div>
-                <ButtonMath name={"Sub"} onClickHandler={() => {onClickHandler("sub")}}/>
-                <ButtonMath name={"Random"} onClickHandler={() => {onClickHandler("rand")}}/>
-                <ButtonMath name={"Add"} onClickHandler={() => {onClickHandler("add")}}/>
+                <Button name={"Sub"} onClickHandler={() => {onClickHandler("sub")}}/>
+                <Button name={"Random"} onClickHandler={() => {onClickHandler("rand")}}/>
+                <Button name={"Add"} onClickHandler={() => {onClickHandler("add")}}/>
             </div>
 
         </div>
