@@ -55,7 +55,7 @@
   width: 64px;
   height: 64px;
   margin-right: 4px;
-  z-index: 1;
+  /*z-index: 1;*/
 }
 
 .box__block {
@@ -68,14 +68,17 @@
 .box__block::before {
   position: absolute;
   content: '';
-  width: 29px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+
   bottom: 0;
-  left: -29px;
-  background-color: rgba(1, 14, 1, 0.8);
+  left: -30px;
+
+  /*background-color: */
+  background: radial-gradient(circle at 0 0, transparent 30px, rgba(1, 14, 1, 0.8) 0);
 }
 
-.box__block::after {
+/*.box__block::after {
   position: absolute;
   content: '';
   left: -80px;
@@ -83,8 +86,8 @@
   height: 80px;
   width: 80px;
   border-radius: 50%;
-  background-color: #fff;
-}
+  background-color: blue;
+}*/
 
 .box__name {
   padding-top: 10px;
