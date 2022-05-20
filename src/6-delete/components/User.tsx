@@ -7,6 +7,7 @@ type UserPropsType = {
     deleteUserHandler: () => void
 }
 
+
 export function User(props: UserPropsType) {
     return (
         <li>

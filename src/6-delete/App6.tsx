@@ -40,10 +40,7 @@ export function App6() {
     }
 
     const deleteUserHandler = (id: number) => {
-        // console.log(id)
-
         setPeople(people.filter((p) => p.id !== id));
-        // filter
     }
 
     const userList = userArray.map((obj) => {
@@ -53,7 +50,6 @@ export function App6() {
     });
 
     function callbackHandler(filterName: FilterNameType) {
-
         setFilter(filterName);
     }
 

@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
-import {User} from "./components/User";
-import {Skill} from "./components/Skill";
-import {Button} from "./components/Button";
 import {Users} from "./components/Users";
+import {Skills} from "./components/Skills";
 
 export type UserArrayType = Array<UserType>
 export type UserType = {
@@ -11,12 +9,23 @@ export type UserType = {
     age: number
 }
 
-type SkillsArrayType = Array<SkillsType>
-type SkillsType = {
+export type SkillsArrayType = Array<SkillsType>
+export type SkillsType = {
     _token: string
     title: string
     isDone: boolean
 }
+
+
+
+const skills: SkillsArrayType = [
+    {_token: 'abc-1312', title: 'HTML', isDone: true},
+    {_token: 'abc-1315', title: 'CSS', isDone: false},
+    {_token: 'abc-1432', title: 'JS', isDone: true},
+    {_token: 'abc-1423', title: 'ReactTS', isDone: false},
+    {_token: 'abc-1756', title: 'NodeJS', isDone: false},
+    {_token: 'abc-1758', title: 'Python', isDone: false},
+]
 
 const users: UserArrayType = [
     {id: 1, name: "James", age: 8},
@@ -32,65 +41,24 @@ const users: UserArrayType = [
     {id: 11, name: "Christopher", age: 100}
 ]
 
-const skills: SkillsArrayType = [
-    {_token: 'abc-1312', title: 'HTML', isDone: true},
-    {_token: 'abc-1315', title: 'CSS', isDone: false},
-    {_token: 'abc-1432', title: 'JS', isDone: true},
-    {_token: 'abc-1423', title: 'ReactTS', isDone: false},
-    {_token: 'abc-1756', title: 'NodeJS', isDone: false},
-    {_token: 'abc-1758', title: 'Python', isDone: false},
-]
-
-// 1. Создать компоненту User (name & age)
-// 1.5/ Передать данные из массива в компоненты User
-
-// 2. Создать универсальную компоненту кнопка
-// 3. C помощью двух кнопок сделать фильтрацию людей старше 50 и младше 50
-
-export type FilterNameType = 'all' | 'less' | 'more';
 
 export function App5() {
 
-    // const [filter, setFilter] = useState('all');
-    //
-    // let userArray = users;
-    // if (filter === 'less') {
-    //     userArray = users.filter(value => value.age < 50)
-    // }
-    // if (filter === 'more') {
-    //     userArray = users.filter(value => value.age >= 50)
-    // }
-    //
-    // const userList = userArray.map((obj) => {
-    //     return (
-    //         <User key={obj.id} name={obj.name} age={obj.age}/>
-    //     )
-    // });
+    const [user, setUser] = useState<UserArrayType>(users)
+    const [skill, setSkill] = useState<SkillsArrayType>(skills)
 
+    const deleteUserHandler = (id: number) => {
+      setUser(user.filter(userName => userName.id !== id))
+    }
 
-    const skillList = skills.map((obj) => {
-        return (
-            <Skill key={obj._token} title={obj.title} isDone={obj.isDone}/>
-        )
-    })
-
-    // function callbackHandler(filterName: FilterNameType) {
-    //     // console.log(filterName)
-    //     setFilter(filterName);
-    // }
+    const deleteSkillHandler = (_token: string) => {
+        setSkill(skill.filter(skillName => skillName._token !== _token))
+    }
 
     return (
         <div>
-            <Users users={users}/>
-            <div>
-                <h3>Сортировка навыков</h3>
-                <ul>
-                    {skillList}
-                </ul>
-                <div>
-
-                </div>
-            </div>
+            <Users user={user} deleteUserHandler={deleteUserHandler} />
+            <Skills skill={skill} deleteSkillHandler={deleteSkillHandler}/>
         </div>
     )
 }
