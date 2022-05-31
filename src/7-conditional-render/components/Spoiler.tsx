@@ -25,7 +25,7 @@ export function Spoiler(props: SpoilerPropsType) {
             {!isCollapsed && <SpoilerBody itemsArray={props.itemsArray}/>}
 
             {/*<CSSTransition in={!isCollapsed} timeout={300} classNames='alert' unmountOnExit>*/}
-            {/*    <SpoilerBody/>*/}
+            {/*    <SpoilerBody itemsArray={props.itemsArray}/>*/}
             {/*</CSSTransition>*/}
         </div>
 

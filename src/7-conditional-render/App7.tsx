@@ -6,7 +6,7 @@ export type SpoilerArrayType = Array<SpoilerType>
 export type SpoilerType = {
     id: number
     item: string
-    readiness: string
+    readiness: number
 }
 
 export function App7() {
