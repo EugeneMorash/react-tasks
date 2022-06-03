@@ -10,6 +10,14 @@ export function Body(props: BodyPropsType) {
         props.showTest()
     }
 
+    //
+    // if (7 > 5) {
+    //     console.log()
+    //     console.log()
+    // }
+    //
+    // if (7 > 5) console.log()
+
 
     return (
 

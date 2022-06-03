@@ -43,6 +43,8 @@ export function App6() {
         setPeople(people.filter((p) => p.id !== id));
     }
 
+
+
     const userList = userArray.map((obj) => {
         return (
             <User key={obj.id} name={obj.name} age={obj.age} deleteUserHandler={() => {deleteUserHandler(obj.id)}}/>

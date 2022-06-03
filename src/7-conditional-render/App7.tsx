@@ -1,6 +1,7 @@
 import React from 'react';
 import {Rating} from "./components/Rating";
 import {Spoiler} from "./components/Spoiler";
+import {Switch} from "./components/Switch";
 
 export type SpoilerArrayType = Array<SpoilerType>
 export type SpoilerType = {
@@ -28,6 +29,7 @@ export function App7() {
         {id: 445, item: 'SQL', readiness: -8}
     ]
 
+
     return (
         <div>
             {/*{test ? "111" : '222'}*/}
@@ -51,6 +53,8 @@ export function App7() {
             <Rating value={4}/>
             <Rating value={5}/>
             <Rating value={0}/>
+
+            <Switch />
         </div>
     );
 }

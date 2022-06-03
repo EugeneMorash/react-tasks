@@ -8,10 +8,10 @@ type SpoilerBodyPropsType = {
 
 export function SpoilerBody(props: SpoilerBodyPropsType) {
 
-    const skillArray = props.itemsArray.map(
-        (skill) => {
-            return <li key={skill.id}>
-                {skill.item}: {skill.readiness}
+    const itemArray = props.itemsArray.map(
+        (item) => {
+            return <li key={item.id}>
+                {item.item}: {item.readiness}
             </li>
         }
     )
@@ -19,7 +19,7 @@ export function SpoilerBody(props: SpoilerBodyPropsType) {
     return (
         <div>
             <ul>
-                {skillArray}
+                {itemArray}
             </ul>
         </div>
     )

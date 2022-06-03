@@ -1,13 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Body} from "./components/Body";
 
 
 export function App8() {
 
-    const test: number = 10;
+    const [test, setTest] = useState(10)
 
     const showTest = () => {
-        console.log(test)
+        setTest(test + 1)
+        // console.log(test)
     }
 
     return (

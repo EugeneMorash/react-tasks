@@ -23,6 +23,10 @@ export function Spoiler(props: SpoilerPropsType) {
             <h3 onClick={onClickHandler}>{props.title}</h3>
 
             {!isCollapsed && <SpoilerBody itemsArray={props.itemsArray}/>}
+            {/* конструкция if */}
+
+            {/*{!isCollapsed ? <SpoilerBody itemsArray={props.itemsArray}/> : ""}*/}
+            {/* конструкция if/else */}
 
             {/*<CSSTransition in={!isCollapsed} timeout={300} classNames='alert' unmountOnExit>*/}
             {/*    <SpoilerBody itemsArray={props.itemsArray}/>*/}

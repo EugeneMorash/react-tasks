@@ -58,6 +58,16 @@ export function App10() {
 
 
 
+// create -> [newObj, ...arrayObj]
+// read -> map (key={})
+// update -> map
+// delete -> filter
+
+// filter -> filter
+// sum -> reduce
+// sort -> sort
+
+
 
 
 
